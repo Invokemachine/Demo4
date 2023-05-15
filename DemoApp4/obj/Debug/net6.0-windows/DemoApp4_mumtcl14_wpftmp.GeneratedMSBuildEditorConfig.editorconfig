@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = DemoApp4
+build_property.RootNamespace = DemoApp4_mumtcl14_wpftmp
 build_property.ProjectDir = C:\Users\AzatYTebiLove\Desktop\Демо задание 4\Demo4\DemoApp4\

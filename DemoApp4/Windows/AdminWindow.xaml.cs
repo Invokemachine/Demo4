@@ -57,17 +57,19 @@ namespace DemoApp4
             {
                 "По возрастанию", "По убыванию"
             };
-            if (MainWindow.admin == true)
+            if (MainWindow.admin == false)
             {
                 DeleteButton.Visibility = Visibility.Hidden;
                 AddButton.Visibility = Visibility.Hidden;
                 EditButton.Visibility = Visibility.Hidden;
+                OrderButton.Visibility = Visibility.Hidden;
             }
             else
             {
                 DeleteButton.Visibility = Visibility.Visible;
                 AddButton.Visibility = Visibility.Visible;
                 EditButton.Visibility = Visibility.Visible;
+
             }
             updateRecordAmount();
         }
@@ -182,7 +184,16 @@ namespace DemoApp4
 
         private void OrderButton_Click(object sender, RoutedEventArgs e)
         {
+            ClientServiceWindow clientServiceWindow = new();
+            clientServiceWindow.Show();
+            Close();
+        }
 
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new();
+            main.Show();
+            Close();
         }
     }
 }

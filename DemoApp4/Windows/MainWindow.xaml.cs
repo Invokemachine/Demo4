@@ -20,6 +20,7 @@ namespace DemoApp4
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static bool admin = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,8 +28,16 @@ namespace DemoApp4
 
         private void AdminButton_Click(object sender, RoutedEventArgs e)
         {
+            admin = true;
             AdminWindow adminWindow = new AdminWindow();
             adminWindow.Show();
+            Close();
+        }
+
+        private void ClientButton_Click(object sender, RoutedEventArgs e)
+        {
+            AdminWindow admin = new AdminWindow();
+            admin.Show();
             Close();
         }
     }

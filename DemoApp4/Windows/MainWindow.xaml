@@ -15,7 +15,7 @@
             <Label HorizontalAlignment="Center" Content="Вход" Margin="3"/>
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <Button Content="Клиент"/>
+            <Button x:Name="ClientButton" Content="Клиент" Click="ClientButton_Click"/>
             <Button x:Name="AdminButton" Content="Админ" Click="AdminButton_Click"/>
             <TextBox x:Name="CodeTextBox" Visibility="Hidden"/>
             <Button x:Name="EnterCodeButton" Content="Ввести код" Visibility="Hidden"/>

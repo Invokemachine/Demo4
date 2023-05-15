@@ -31,8 +31,8 @@ namespace DemoApp4.Windows
 
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
-            ClientServiceWindow clientServiceWindow = new ClientServiceWindow();
-            clientServiceWindow.Show();
+            AdminWindow admin = new();
+            admin.Show();
             Close();
         }
 

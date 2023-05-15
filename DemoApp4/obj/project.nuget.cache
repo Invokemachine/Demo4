@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "34vKSULBdKJP3GOj11WJS3RH8mZL3B57Hh1Ob/alGjMCtG49JJJ4SA+OY5aOliCql04EUR7kw2+NiJQ9KNvEBQ==",
+  "dgSpecHash": "jad5cS35BsN2De9vIA0kZE0HmOElV6/hhtXH1gJjwtwumzg9OWKhffryg2W/+VoFihTsSmu3PyY/aS0ftZ+lNg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AzatYTebiLove\\source\\repos\\DemoApp4\\DemoApp4\\DemoApp4.csproj",
+  "projectFilePath": "C:\\Users\\AzatYTebiLove\\Desktop\\Демо задание 4\\Demo4\\DemoApp4\\DemoApp4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AzatYTebiLove\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\AzatYTebiLove\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
