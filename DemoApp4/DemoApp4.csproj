@@ -1,0 +1,78 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\forcompany.jpg" />
+    <None Remove="Resources\onlinelessons.jpg" />
+    <None Remove="Resources\school_logo.png" />
+    <None Remove="Resources\Английскийязык.jpg" />
+    <None Remove="Resources\Испанскийязык.jpg" />
+    <None Remove="Resources\Итальянскийязык.jpg" />
+    <None Remove="Resources\киноклуб.jpg" />
+    <None Remove="Resources\Китайскийязык.jpg" />
+    <None Remove="Resources\Немецкийязык.png" />
+    <None Remove="Resources\Подготовкакэкзамену IELTS.jpg" />
+    <None Remove="Resources\ПодготовкакэкзаменуACT.png" />
+    <None Remove="Resources\ПодготовкакэкзаменуGMAT.png" />
+    <None Remove="Resources\ПодготовкакэкзаменуGRE.jpeg" />
+    <None Remove="Resources\ПодготовкакэкзаменуSAT.png" />
+    <None Remove="Resources\ПодготовкакэкзаменуTOEFL.jpg" />
+    <None Remove="Resources\Португальскийязык.jpg" />
+    <None Remove="Resources\Французскийязык.jpg" />
+    <None Remove="Resources\Японскийязык.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\onlinelessons.jpg" />
+    <Resource Include="Resources\Английскийязык.jpg" />
+    <Resource Include="Resources\Испанскийязык.jpg" />
+    <Resource Include="Resources\Итальянскийязык.jpg" />
+    <Resource Include="Resources\киноклуб.jpg" />
+    <Resource Include="Resources\Китайскийязык.jpg" />
+    <Resource Include="Resources\Немецкийязык.png" />
+    <Resource Include="Resources\Подготовкакэкзамену IELTS.jpg" />
+    <Resource Include="Resources\ПодготовкакэкзаменуACT.png" />
+    <Resource Include="Resources\ПодготовкакэкзаменуGMAT.png" />
+    <Resource Include="Resources\ПодготовкакэкзаменуGRE.jpeg" />
+    <Resource Include="Resources\ПодготовкакэкзаменуSAT.png" />
+    <Resource Include="Resources\ПодготовкакэкзаменуTOEFL.jpg" />
+    <Resource Include="Resources\Португальскийязык.jpg" />
+    <Resource Include="Resources\Французскийязык.jpg" />
+    <Resource Include="Resources\Японскийязык.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0-preview.3.23174.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0-preview.3.23174.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\forcompany.jpg" />
+    <Resource Include="Resources\school_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
