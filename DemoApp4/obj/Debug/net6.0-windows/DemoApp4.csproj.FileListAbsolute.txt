@@ -74,3 +74,8 @@ C:\Users\AzatYTebiLove\source\repos\DemoApp4\DemoApp4\obj\Debug\net6.0-windows\W
 C:\Users\AzatYTebiLove\source\repos\DemoApp4\DemoApp4\obj\Debug\net6.0-windows\Windows\AddWindow.baml
 C:\Users\AzatYTebiLove\source\repos\DemoApp4\DemoApp4\obj\Debug\net6.0-windows\Windows\EditWindow.g.cs
 C:\Users\AzatYTebiLove\source\repos\DemoApp4\DemoApp4\obj\Debug\net6.0-windows\Windows\EditWindow.baml
+C:\Users\AzatYTebiLove\source\repos\DemoApp4\DemoApp4\obj\Debug\net6.0-windows\Windows\AddClientServiceWindow.g.cs
+C:\Users\AzatYTebiLove\source\repos\DemoApp4\DemoApp4\obj\Debug\net6.0-windows\Windows\ClientServiceWindow.g.cs
+C:\Users\AzatYTebiLove\source\repos\DemoApp4\DemoApp4\obj\Debug\net6.0-windows\Windows\AddClientServiceWindow.baml
+C:\Users\AzatYTebiLove\source\repos\DemoApp4\DemoApp4\obj\Debug\net6.0-windows\Windows\ClientServiceWindow.baml
+C:\Users\AzatYTebiLove\source\repos\DemoApp4\DemoApp4\obj\Debug\net6.0-windows\DemoApp4_Content.g.cs

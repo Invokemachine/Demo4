@@ -85,11 +85,9 @@ namespace DemoApp4.Windows
                 dirInfo = fileInfo.Directory.Parent;
                 parentDirName = dirInfo.ToString() + "\\Resources\\" + ofd.SafeFileName;
 
-                System.IO.File.Copy(filename, parentDirName);
+                System.IO.File.Copy(filename, parentDirName, true);
 
                 _currentService.Photo = ofd.SafeFileName;
-                db.Entry(_currentService).State = EntityState.Modified;
-                db.SaveChanges();
 
                 InitImage();
             }

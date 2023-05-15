@@ -77,43 +77,21 @@ namespace DemoApp4.Windows
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            Service item = AdminWindow._currentService;
-            foreach (Service service in db.Services)
-            {
-                if (service.ServiceId == item.ServiceId)
-                {
-                    _currentService = service;
-                    break;
-                }
-            }
             StringBuilder errors = new StringBuilder();
-            if (_currentService == null)
-                return;
-            if (string.IsNullOrEmpty(NameTextBox.Text))
-                MessageBox.Show("Введите название", "Ошибка");
-            if (string.IsNullOrEmpty(DurationTextBox.Text))
-                MessageBox.Show("Введите длительность", "Ошибка");
-            if (errors.Length > 0)
+            _currentService.Name = NameTextBox.Text;
+            _currentService.Cost = Convert.ToDouble(CostTextBox.Text);
+            _currentService.Discription = DescriptionTextBox.Text;
+            _currentService.Discount = Convert.ToInt32(DiscountTextBox.Text);
+            _currentService.Duration = Convert.ToInt32(DurationTextBox.Text);
+            try
             {
-                MessageBox.Show(errors.ToString(), "Ошибка");
-                return;
+                db.Entry(_currentService).State = EntityState.Modified;
+                db.SaveChanges();
+                MessageBox.Show("Информация успешно изменена!", "Окно оповещений");
             }
-            else
+            catch (Exception ex)
             {
-                _currentService.Name = NameTextBox.Text;
-                _currentService.Cost = Convert.ToDouble(CostTextBox.Text);
-                _currentService.Discription = DescriptionTextBox.Text;
-                _currentService.Duration = Convert.ToInt32(DurationTextBox.Text);
-                try
-                {
-                    db.Entry(_currentService).State = EntityState.Modified;
-                    db.SaveChanges();
-                    MessageBox.Show("Информация успешно изменена!", "Окно оповещений");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message.ToString());
-                }
+                MessageBox.Show(ex.Message.ToString());
             }
         }
 
@@ -141,7 +119,7 @@ namespace DemoApp4.Windows
                 dirInfo = fileInfo.Directory.Parent;
                 parentDirName = dirInfo.ToString() + "\\Resources\\" + ofd.SafeFileName;
 
-                System.IO.File.Copy(filename, parentDirName);
+                System.IO.File.Copy(filename, parentDirName, true);
 
                 _currentService.Photo = ofd.SafeFileName;
                 db.Entry(_currentService).State = EntityState.Modified;

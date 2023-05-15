@@ -20,5 +20,14 @@
             <Setter Property="Height" Value="30"/>
             <Setter Property="Width" Value="150"/>
         </Style>
+        <Style TargetType="Border" x:Key="mainBorder">
+            <Setter Property="Background" Value="White"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Discount, Converter={StaticResource DiscountConverter}}">
+                    <DataTrigger.Value>true</DataTrigger.Value>
+                    <Setter Property="Background" Value="#7fff00"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
     </Application.Resources>
 </Application>

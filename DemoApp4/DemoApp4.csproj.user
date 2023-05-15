@@ -18,10 +18,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Windows\AddClientServiceWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\AddWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\ClientServiceWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\EditWindow.xaml">

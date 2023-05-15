@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\AzatYTebiLove\source\repos\DemoApp4\DemoApp4\App.xaml
-4115753195
-
-211204960925
+655829857
+11290460896
+23481339000
 222-952847900
-Windows\AddWindow.xaml;Windows\AdminWindow.xaml;Windows\EditWindow.xaml;Windows\MainWindow.xaml;
+Windows\AddClientServiceWindow.xaml;Windows\AddWindow.xaml;Windows\AdminWindow.xaml;Windows\ClientServiceWindow.xaml;Windows\EditWindow.xaml;Windows\MainWindow.xaml;
 
 False
 

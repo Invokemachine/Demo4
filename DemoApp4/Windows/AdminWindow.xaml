@@ -3,10 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:converter="clr-namespace:DemoAgainAndAgain.Models;assembly="
+        xmlns:converter="clr-namespace:DemoApp4.Models;assembly="
         xmlns:local="clr-namespace:DemoApp4"
         mc:Ignorable="d"
-        Title="AdminWindow" Height="450" Width="800">
+        Title="Окно услуг" Height="450" Width="800">
     <Window.Resources>
         <converter:CutOffConverter x:Key="DiscountConverter" Cutoff="1"/>
         <Style TargetType="TextBlock" x:Key="saleBlock">
@@ -20,6 +20,15 @@
                     <DataTrigger.Value>true</DataTrigger.Value>
                     <Setter Property="TextDecorations" Value="Strikethrough"/>
                     <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="Border" x:Key="mainBorder">
+            <Setter Property="Background" Value="White"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Discount, Converter={StaticResource DiscountConverter}}">
+                    <DataTrigger.Value>true</DataTrigger.Value>
+                    <Setter Property="Background" Value="#7fff00"/>
                 </DataTrigger>
             </Style.Triggers>
         </Style>
@@ -66,12 +75,14 @@
 
         <Button x:Name="EditButton" Content="Редактировать" FontSize="14" Grid.Column="1" Grid.Row="2" Width="110" Click="EditButton_Click"/>
 
-        <Button x:Name="DeleteButton" Content="Удалить" />
+        <Button x:Name="DeleteButton" Content="Удалить" Grid.Column="2" Grid.Row="2" Width="110" Click="DeleteButton_Click"/>
+
+        <Button x:Name="OrderButton" Content="Заявки" Grid.Column="3" Grid.Row="2" Width="110" Click="OrderButton_Click"/>
 
         <ListView Grid.ColumnSpan="6" Grid.Row="1" x:Name="ServicesList" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Stretch" SelectionChanged="ServicesList_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderBrush="Black" BorderThickness="1">
+                    <Border BorderBrush="Black" BorderThickness="1" Style="{StaticResource mainBorder}">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="3*"/>

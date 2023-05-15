@@ -29,6 +29,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resources\school_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\onlinelessons.jpg" />
     <Resource Include="Resources\Английскийязык.jpg" />
     <Resource Include="Resources\Испанскийязык.jpg" />

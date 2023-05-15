@@ -22,6 +22,7 @@ namespace DemoApp4
     public partial class AdminWindow : Window
     {
         private bool _isAdmin;
+        MainWindow main = new();
         List<Service> services = new List<Service>();
         Demo4DbContext db = new Demo4DbContext();
         public static Service _currentService;
@@ -56,6 +57,18 @@ namespace DemoApp4
             {
                 "По возрастанию", "По убыванию"
             };
+            if (MainWindow.admin == true)
+            {
+                DeleteButton.Visibility = Visibility.Hidden;
+                AddButton.Visibility = Visibility.Hidden;
+                EditButton.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                DeleteButton.Visibility = Visibility.Visible;
+                AddButton.Visibility = Visibility.Visible;
+                EditButton.Visibility = Visibility.Visible;
+            }
             updateRecordAmount();
         }
 
@@ -144,6 +157,32 @@ namespace DemoApp4
                         break;
                     }
             }
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            var elements = ServicesList.SelectedItems.Cast<Service>().ToList();
+
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {elements.Count} элементов?", "Внимание!",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    db.Services.RemoveRange(elements);
+                    db.SaveChanges();
+                    MessageBox.Show("Данные удалены!", "Окно оповещений");
+                    ServicesList.ItemsSource = db.Services.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+
+        private void OrderButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
